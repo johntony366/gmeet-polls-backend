@@ -2,13 +2,13 @@
   "name": "reply-poll-service",
   "version": "1.0.0",
   "description": "",
-  "main": "index.ts",
+  "main": "server.ts",
   "scripts": {
     "build": "npm i && tsc -p tsconfig.json",
-    "dev": "nodemon --exec ts-node src/app.ts",
-    "debug": "nodemon --exec \"node --inspect=0.0.0.0:9229 --require ts-node/register ./src/app.ts\"",
+    "dev": "nodemon --exec ts-node src/server.ts",
+    "debug": "nodemon --exec \"node --inspect=0.0.0.0:9229 --require ts-node/register ./src/server.ts\"",
     "vercel-build": "echo \"No need to run build\"",
-    "start": "node build/src/app.js"
+    "start": "node build/src/server.js"
   },
   "author": "",
   "license": "ISC",
@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "morgan": "^1.10.0",
     "redis": "^4.6.11",

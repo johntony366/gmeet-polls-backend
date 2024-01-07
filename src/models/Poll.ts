@@ -6,10 +6,11 @@ class Poll extends Entity {}
 const pollSchema = new Schema(
   Poll,
   {
+    meetId: { type: "string" },
     title: { type: "string" },
     options: { type: "string[]" },
   },
-  { dataStructure: "JSON" },
+  { dataStructure: "JSON" }
 );
 
 async function vote(pollId, option) {
